@@ -9,11 +9,13 @@ import 'rxjs/add/operator/do';
 @Injectable()
 export class StudentsService {
 
-  private studentsUrl: string = "http://localhost:3000/students";
-  private dailyLogsUrl: string = "http://localhost:3000/daily_logs";
-  private reportsUrl: string = "http://localhost:3000/reports";
-  private referralsUrl: string = "http://localhost:3000/referrals";
-  private recommendationsUrl: string = "http://localhost:3000/recommendations";
+  
+ private studentsUrl: string = "https://inclucare-api1.herokuapp.com/students";
+ private dailyLogsUrl: string = "https://inclucare-api1.herokuapp.com/daily_logs"
+ private reportsUrl: string = "https://inclucare-api1.herokuapp.com/reports";
+ private referralsUrl: string = "https://inclucare-api1.herokuapp.com/referrals";
+ private recommendationsUrl: string = "https://inclucare-api1.herokuapp.com//recommendations";
+
 
   constructor(private http: Http) {}
 
