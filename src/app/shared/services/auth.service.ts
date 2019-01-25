@@ -12,7 +12,7 @@ import { TeamMember } from "../models/team-member.model";
 @Injectable()
 export class AuthService {
 
-  private url: string = "http://localhost:3000/team_members";
+  private url: string = "https://inclucare-api1.herokuapp.com/team_members";
 
   constructor(
     private http: Http,
