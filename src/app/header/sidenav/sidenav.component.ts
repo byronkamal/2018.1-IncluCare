@@ -15,6 +15,7 @@ import { AdminPageComponent } from "../../profile/admin-page/admin-page.componen
 })
 export class SidenavComponent implements OnInit {
   @ViewChild("registerForm") registerForm: RegisterFormComponent;
+  @ViewChild("adminPage") adminPage: AdminPageComponent;
 
   constructor(public authService: AuthService, private router: Router) {}
 

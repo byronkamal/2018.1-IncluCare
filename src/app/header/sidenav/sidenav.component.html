@@ -25,8 +25,8 @@
               </a>
             </li>
             <li *ngIf="authService.userIsAdmin()">
-              <a href="/admin">
-                <i class="material-icons">person_add</i>
+              <a [routerLink]="['/admin']">
+                <i class="material-icons">person</i>
                 <span>Pagina de Administrador</span>
               </a>
             </li>
