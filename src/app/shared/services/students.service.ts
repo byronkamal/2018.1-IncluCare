@@ -14,7 +14,7 @@ export class StudentsService {
  private dailyLogsUrl: string = "https://inclucare-api1.herokuapp.com/daily_logs"
  private reportsUrl: string = "https://inclucare-api1.herokuapp.com/reports";
  private referralsUrl: string = "https://inclucare-api1.herokuapp.com/referrals";
- private recommendationsUrl: string = "https://inclucare-api1.herokuapp.com//recommendations";
+ private recommendationsUrl: string = "https://inclucare-api1.herokuapp.com/recommendations";
 
 
   constructor(private http: Http) {}
