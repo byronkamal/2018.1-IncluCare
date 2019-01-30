@@ -1,38 +1,39 @@
-import { NgModule }                         from '@angular/core';
-import { HttpModule }                       from '@angular/http';
-import { BrowserModule }                    from '@angular/platform-browser';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { NgModule } from "@angular/core";
+import { HttpModule } from "@angular/http";
+import { BrowserModule } from "@angular/platform-browser";
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
+import { HashLocationStrategy, LocationStrategy } from "@angular/common";
 
-import { MaterializeModule }             from 'angular2-materialize';
-import { Angular2TokenService }             from 'angular2-token';
-import { OrderModule }                      from 'ngx-order-pipe';
+import { MaterializeModule } from "angular2-materialize";
+import { Angular2TokenService } from "angular2-token";
+import { OrderModule } from "ngx-order-pipe";
 
-import { AppComponent }                     from './app.component';
+import { AppComponent } from "./app.component";
 import { AppRouterModule } from "./app-router.module";
-import { AuthGuard }                        from "./shared/guards/auth.guard";
-import { LoginGuard }                       from "./shared/guards/login.guard";
-import { AuthService }                      from "./shared/services/auth.service";
-import { LoginComponent }                   from './login/login.component';
-import { RegisterFormComponent }            from './register/register-form/register-form.component';
-import { ProfileComponent }                 from './profile/profile.component';
-import { StudentsService }                  from './shared/services/students.service';
-import { StudentsComponent }                from './students/students.component';
-import { StudentFormComponent }             from './students/student-form/student-form.component';
-import { FilterPipe }                       from './shared/pipes/filter.pipe';
-import { SidenavComponent }                 from './header/sidenav/sidenav.component';
-import { NavbarComponent }                  from './header/navbar/navbar.component';
-import { StudentPanelComponent }            from './students/student-panel/student-panel.component';
-import { DailyLogComponent }                from './students/daily-log/daily-log.component';
-import { DailyLogFormComponent }            from './students/daily-log-form/daily-log-form.component';
-import { ReportComponent }                  from './students/report/report.component';
-import { ReportFormComponent }              from './students/report-form/report-form.component';
-import { ReferralComponent }                from './students/referral/referral.component';
-import { ReferralFormComponent }            from './students/referral-form/referral-form.component';
-import { ReferralPanelComponent }           from './students/referral-panel/referral-panel.component';
-import { DailyLogPanelComponent }           from './students/daily-log-panel/daily-log-panel.component';
-import { RecommendationPanelComponent }     from './students/recommendation-panel/recommendation-panel.component';
-import { AdminPageComponent }               from './profile/admin-page/admin-page.component';
-import { TutorialComponent } from './tutorial/tutorial.component';
+import { AuthGuard } from "./shared/guards/auth.guard";
+import { LoginGuard } from "./shared/guards/login.guard";
+import { AuthService } from "./shared/services/auth.service";
+import { LoginComponent } from "./login/login.component";
+import { RegisterFormComponent } from "./register/register-form/register-form.component";
+import { ProfileComponent } from "./profile/profile.component";
+import { StudentsService } from "./shared/services/students.service";
+import { StudentsComponent } from "./students/students.component";
+import { StudentFormComponent } from "./students/student-form/student-form.component";
+import { FilterPipe } from "./shared/pipes/filter.pipe";
+import { SidenavComponent } from "./header/sidenav/sidenav.component";
+import { NavbarComponent } from "./header/navbar/navbar.component";
+import { StudentPanelComponent } from "./students/student-panel/student-panel.component";
+import { DailyLogComponent } from "./students/daily-log/daily-log.component";
+import { DailyLogFormComponent } from "./students/daily-log-form/daily-log-form.component";
+import { ReportComponent } from "./students/report/report.component";
+import { ReportFormComponent } from "./students/report-form/report-form.component";
+import { ReferralComponent } from "./students/referral/referral.component";
+import { ReferralFormComponent } from "./students/referral-form/referral-form.component";
+import { ReferralPanelComponent } from "./students/referral-panel/referral-panel.component";
+import { DailyLogPanelComponent } from "./students/daily-log-panel/daily-log-panel.component";
+import { RecommendationPanelComponent } from "./students/recommendation-panel/recommendation-panel.component";
+import { AdminPageComponent } from "./profile/admin-page/admin-page.component";
+import { TutorialComponent } from "./tutorial/tutorial.component";
 import { TutorialLoginComponent } from "./tutorial/tutorial-login/tutorial-login.component";
 
 @NgModule({
@@ -75,8 +76,9 @@ import { TutorialLoginComponent } from "./tutorial/tutorial-login/tutorial-login
     AuthService,
     FilterPipe,
     Angular2TokenService,
-    StudentsService
+    StudentsService,
+    { provide: LocationStrategy, useClass: HashLocationStrategy }
   ],
-  bootstrap: [ AppComponent ]
+  bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}
